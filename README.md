@@ -186,6 +186,6 @@ Detected objects are displayed with:
 
 ##### **Author**
 
-Nameet Ahire
+Team Members : Nameet Ahire, Sakshi Gawade & Nishita Gole
 
 Note : In mp.py there are some error because of twilio and email password conflict with git. So to run the project properly you need to modify the mp.py file or you can remove the email and twilio function completely.
