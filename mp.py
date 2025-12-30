@@ -32,7 +32,7 @@ def load_model(model_choice):
     return None
 email_info = {
     'sender_email': 'nameet1717@gmail.com',
-    'sender_password': 'hudeooawfqxlfqnv',
+    'sender_password': '',
     'recipient_email': 'nameet.7800@gmail.com',
     'subject': 'Anomaly Detection Alert',
     'text_content': """
