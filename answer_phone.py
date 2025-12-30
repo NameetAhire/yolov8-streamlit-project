@@ -1,19 +1,19 @@
 import os
 from twilio.rest import Client
 
-TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
-TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
-TWILIO_PHONE_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")
-RECIPIENT_PHONE_NUMBER = os.getenv("RECIPIENT_PHONE_NUMBER")
+TWILIO_SID = os.getenv("TWILIO_SID")
+TWILIO_TOKEN = os.getenv("TWILIO_TOKEN")
+TWILIO_FROM = os.getenv("TWILIO_FROM")
+TWILIO_TO = os.getenv("TWILIO_TO")
 
 def make_phone_call():
-    if not TWILIO_ACCOUNT_SID or not TWILIO_AUTH_TOKEN:
-        raise ValueError("Twilio credentials not set in environment variables")
+    if not TWILIO_SID or not TWILIO_TOKEN:
+        raise ValueError("Twilio credentials not set")
 
-    client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+    client = Client(TWILIO_SID, TWILIO_TOKEN)
     call = client.calls.create(
-        to=RECIPIENT_PHONE_NUMBER,
-        from_=TWILIO_PHONE_NUMBER,
+        to=TWILIO_TO,
+        from_=TWILIO_FROM,
         url="http://demo.twilio.com/docs/voice.xml"
     )
     print(f"Call SID: {call.sid}")
