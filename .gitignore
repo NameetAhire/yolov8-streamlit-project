@@ -1,0 +1,8 @@
+__pycache__/
+uploads/
+*.pt
+*.jpg
+*.png
+*.mp4
+.env
+venv/
